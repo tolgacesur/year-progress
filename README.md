@@ -1,4 +1,4 @@
-# Year Progess
+# Year Progress
 
 Displays the current year progress.
 
