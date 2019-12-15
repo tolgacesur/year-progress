@@ -1,0 +1,107 @@
+body {
+	background-color : #eee;
+	font-family: 'Acme', sans-serif;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height : 500px;
+}
+
+.progress {
+	display : flex;
+	align-items : center;
+	width: 400px;
+	height : 25px;
+	background-color : #adadad;
+	border-radius : 5px;
+}
+
+.progress-container {
+	display : flex;
+	align-items : center;
+	justify-content : center;
+}
+
+.progress .bar {
+	display: flex;
+	align-items: center;
+	justify-content : center;
+	border-radius: 5px 0px 0px 5px;
+	background-color : #6ad058;
+	height : 25px;
+	background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	background-size: 1rem 1rem;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-fill-mode: none;
+	animation-play-state: running;
+	animation-name: progress-bar-stripes;
+}
+
+.progress-container .value {
+	color : #fff;
+	position: absolute;
+}
+
+.current-year {
+	font-size : 90px;
+	margin-top: 10px;
+	margin-bottom : 0px;
+	color: #ec4d4d;
+}
+
+.current-date {
+	margin-top: 0px;
+	margin-bottom : 15px;
+}
+
+.alert {
+	display : none;
+	margin-bottom : 0px;
+}
+
+.footer {
+	margin-top : 40px;
+	font-size : 15px;
+	align-items: center;
+	display: flex;
+	color : #808080
+}
+
+.footer .github {
+	fill : #808080;
+}
+
+.footer span {
+	margin-left : 5px;
+}
+
+@-webkit-keyframes progress-bar-stripes {
+	from  { background-position: 100px 0; }
+	to    { background-position: 0 0; }
+}
+
+// Spec and IE10+
+@keyframes progress-bar-stripes {
+	from  { background-position: 40px 0; }
+	to    { background-position: 0 0; }
+}
+
+@media(max-width : 420px){
+	.progress {
+		width : 300px;
+	}
+}
+
+@media(max-width : 200px){
+	.progress {
+		width : 150px;
+	}
+}
